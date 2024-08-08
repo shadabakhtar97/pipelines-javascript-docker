@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: shadabakhtarpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: shadabakhtarpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: shadabakhtarpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: shadabakhtarpipelinesjavascriptdocker 
+          image: p1acr.azurecr.io/shadabakhtarpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
